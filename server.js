@@ -10,10 +10,16 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(express.json())
 connectDB();
+app.options("",cors({
+    origin:"https://my-library-frontend-reactjs-mern-project.vercel.app",
+   credentials:true,
+     methods:["GET","POST","PUT","DELETE"],
+}));
 app.use(
     cors({
     origin:"https://my-library-frontend-reactjs-mern-project.vercel.app",
-   credentials:true, 
+   credentials:true,
+     methods:["GET","POST","PUT","DELETE"],
 }))
 dotenv.config();
 app.use('/',testRouter)
