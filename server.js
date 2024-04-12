@@ -12,7 +12,7 @@ app.use(express.json())
 connectDB();
 app.use(
     cors({
-    origin:"http://localhost:3000",
+    origin:"https://my-library-frontend-reactjs-mern-project.vercel.app",
    credentials:true, 
 }))
 dotenv.config();
