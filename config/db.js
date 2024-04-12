@@ -2,12 +2,12 @@ const mongoose=require("mongoose")
 
 const connectDB=async()=>{
     try{
-        const conn =await mongoose.connect("mongodb+srv://arun:SystemCrash@arun.fd066ii.mongodb.net/?retryWrites=true&w=majority",{
+        const conn =await mongoose.connect("mongodb+srv://arun:SystemCrash@arun.fd066ii.mongodb.net/?retryWrites=true&w=majority&appName=Arun",{
            useNewUrlParser:true,
            useUnifiedTopology:true, 
         })
 
-
+        
         console.log("Database Connected");
     }
     catch(error){
